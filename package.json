@@ -1,6 +1,6 @@
 {
-  "name": "madejs",
-  "version": "1.0.0",
+  "name": "madejsfw",
+  "version": "1.0.1",
   "description": "simple framework with node",
   "main": "madejs.js",
   "type": "module",
