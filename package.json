@@ -1,6 +1,6 @@
 {
   "name": "madejsfw",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "simple framework with node",
   "main": "index.js",
   "type": "module",
