@@ -1,8 +1,8 @@
 {
   "name": "madejsfw",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "simple framework with node",
-  "main": "madejs.js",
+  "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
