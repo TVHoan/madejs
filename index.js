@@ -4,12 +4,12 @@ export default ()=> {
     var app = http.createServer(function (req, res) {
         res["send"] = function send(code, body) {
             res.writeHead(code, {'Content-Type': 'text/html'});
-            res.write(body);
+            res.end(body);
         }
         res["json"] = function json(code, body) {
-            res.writeHead(code, {'Content-Type': 'application/json'});
             try {
-                res.write(JSON.parse(body));
+                res.writeHead(code, {'Content-Type': 'application/json'});
+                res.end(JSON.stringify(body));
             } catch (e) {
                 res.send(code, body)
             }
@@ -18,10 +18,9 @@ export default ()=> {
             router[req.method][req.url](req, res);
         } else {
             res.writeHead(404, {'Content-Type': 'text/html'});
-            res.write('not found');
+            res.end('not found');
 
         }
-        res.end();
     });
 
     app['get'] = (path, callback) => {
